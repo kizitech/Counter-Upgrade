@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme='light'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/kizitech-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Counter Web App</title>
+</head>
+
+<body>
+    <!-- TOGGLE BUTTON INPUT -->
+    <section class="toggle-container" title="Switch Mode">
+        <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+    </section>
+
+
+    <div class="card">
+        <img class="img" src="Images/counting.jpg" alt="">
+        <div class="textBox">
+          <p class="text head">OHANI KIZITO</p>
+          <span>Counter App</span>
+          <button id="begin" class="begin">
+            <span class="actual-text">&nbsp;count&nbsp;</span>
+            <span class="hover-text" aria-hidden="true">&nbsp;count&nbsp;</span>
+        </button>
+        </div>
+      </div>
+      
+
+    <section class="counter-container">
+
+        <section class="cardContainer">
+            <div class="inner-card">
+                <!-- NAVIGATION TOOL BAR CONTAINER -->
+                <div class="toolsCard">
+                    <div class="tools">
+                        <div class="circle">
+                            <span class="red box"></span>
+                        </div>
+                        <div class="circle">
+                            <span class="yellow box"></span>
+                        </div>
+                        <div class="circle">
+                            <span class="green box"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COUNTER APP -->
+                <section class="counter-content">
+                    <h1 class="header-name">Kizito's Counter</h1>
+                    <span class="value" id="value">0</span>
+                    <div class="buttonContainer">
+                        <button onclick="decrease()" class="button decrease">decrease</button>
+                        <button onclick="reset()" class="button reset">reset</button>
+                        <button onclick="increase()" class="button increase">increase</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
