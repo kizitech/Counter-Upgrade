@@ -1,7 +1,7 @@
 var checkbox = document.querySelector('input[name=theme]');
 
-checkbox.addEventListener('change', function() {
-	if(this.checked) {
+checkbox.addEventListener('change', function () {
+    if (this.checked) {
         trans()
         document.documentElement.setAttribute('data-theme', 'dark')
     } else {
@@ -13,8 +13,8 @@ checkbox.addEventListener('change', function() {
 let trans = () => {
     document.documentElement.classList.add('transition');
     window.setTimeout(() => {
-    	document.documentElement.classList.remove('transition')
-    }, 1000) 
+        document.documentElement.classList.remove('transition')
+    }, 1000)
 }
 
 
@@ -24,58 +24,63 @@ let count = 0;
 const value = document.querySelector("#value");
 const card = document.querySelector(".inner-card");
 
-function decrease(){
+function decrease() {
     count--;
     value.textContent = count
 };
 
-function reset(){
+function reset() {
     count = 0;
     value.textContent = count
 };
 
-function increase(){
+function increase() {
     count++;
     value.textContent = count
 };
 
 // THE BORDER COLOR CHANGE AND MOUSE EFFECT =========================================================================
 let button = document.querySelectorAll('.button')
-button.forEach(buttons =>{
-    buttons.addEventListener('click',()=>{
-        if (count < 0 ) {
+button.forEach(buttons => {
+    buttons.addEventListener('click', () => {
+        if (count < 0) {
             value.style.color = "#fa211d"
             buttons.style.borderColor = '#fa211d'
             card.style.borderColor = '#fa211d'
-        }else{
+        } else {
             value.style.color = "#07e75d"
-            buttons. style.borderColor = '#07e75d'
-            card. style.borderColor = '#07e75d'
+            buttons.style.borderColor = '#07e75d'
+            card.style.borderColor = '#07e75d'
         }
-        
+
         if (count == 0) {
             value.style.color = "#111111"
             buttons.style.borderColor = '#fab027'
             card.style.borderColor = '#fab027'
-    
+
         }
-    
-        buttons.addEventListener('mousedown',()=>{
+
+        buttons.addEventListener('mousedown', () => {
             buttons.style.transform = "scale(0.7)"
         })
-        buttons.addEventListener('mouseup',()=>{
+        buttons.addEventListener('mouseup', () => {
             buttons.style.transform = "none"
         })
-})
+    })
 })
 
 
 // SHOW COUNTER
-const body = document.querySelector("body") 
-const cardCount = document.querySelector(".card") 
-const cardContainer = document.querySelector(".cardContainer") 
-const begin = document.querySelector("#begin") 
+const body = document.querySelector("body")
+const cardCount = document.querySelector(".card")
+const cardContainer = document.querySelector(".cardContainer")
+const begin = document.querySelector("#begin")
+const red = document.querySelector(".red")
 
-begin.addEventListener("click", ()=> {
+begin.addEventListener("click", () => {
     body.classList.add("count")
+})
+
+red.addEventListener("click", function () {
+    body.classList.remove("count")
 })
