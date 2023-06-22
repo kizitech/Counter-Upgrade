@@ -2,6 +2,9 @@
 
 This is a simple Counter Site application built using HTML, CSS, and JavaScript. It allows users to increment or decrement and also reset a counter. Here's a brief guide to help you understand and run the application:
 
+## Screenshots
+![Loaded Page](Images/screenshot-before-counting.JPG)
+![Counting Page](Images/screenshot-counting.JPG)
 
 ## Link
 [Live link](https://kizitech.github.io/Counter-Upgrade/)
